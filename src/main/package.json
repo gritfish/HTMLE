@@ -1,0 +1,18 @@
+{
+  "name": "nw",
+  "app_name": "nw",
+  "version": "0.0.1",
+  "main": "index.html",
+  "window": {
+    "title": "YOUR_GAME_NAME",
+    "toolbar": false,
+    "fullscreen": true,
+    "width": 1280,
+    "height": 840,
+    "position": "center",
+    "min_width": 1280,
+    "min_height": 640
+  },
+  "chromium-args": "--in-process-gpu --disable-transparency",
+  "devDependencies": {}
+}
