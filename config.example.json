@@ -1,0 +1,10 @@
+{
+  "PGAP_YOUR_APP_ID": "123456",
+  "PGAP_YOUR_EMAIL": "mypgapaccount@email",
+  "PGAP_YOUR_PASSWORD": "thepasswordtomyaccount",
+  "PGAP_YOUR_IOS_PASSWORD": "iossigningpassword",
+  "PGAP_YOUR_ANDROID_PASSWORD": "androidsigningpassword",
+  "PGAP_YOUR_ANDROID_KEYSTORE_PASSWORD": "keystorepassword",
+  "YOUR_ITCH_ACCOUNT": "itchusername",
+  "YOUR_ITCH_GAME_URL": "gameuristem"
+}

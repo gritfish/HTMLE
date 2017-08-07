@@ -1,4 +1,21 @@
 module.exports = function(grunt) {
+  let config;
+  try {
+    config = JSON.parse(require('fs').readFileSync('./config.json', 'utf8'));
+  } catch (err) {
+    console.warn('Config file not found, see README.md if compliling PhoneGap or Itch');
+    // Use a dummy config object so desktop building doesn't fail.
+    config = {
+      "PGAP_YOUR_APP_ID": "123456",
+      "PGAP_YOUR_EMAIL": "mypgapaccount@email",
+      "PGAP_YOUR_PASSWORD": "thepasswordtomyaccount",
+      "PGAP_YOUR_IOS_PASSWORD": "iossigningpassword",
+      "PGAP_YOUR_ANDROID_PASSWORD": "androidsigningpassword",
+      "PGAP_YOUR_ANDROID_KEYSTORE_PASSWORD": "keystorepassword",
+      "YOUR_ITCH_ACCOUNT": "itchusername",
+      "YOUR_ITCH_GAME_URL": "gameuristem"
+    };
+  }
 
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-compress');
@@ -27,7 +44,7 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// Clears folders before 
+		// Clears folders before
 		clean: {
 			all: ['./dist','./temp'],
 			desktop: ['./dist/desktop','./temp/desktop'],
@@ -104,31 +121,31 @@ module.exports = function(grunt) {
 			build: {
 				 options: {
 					archive: "dist/phonegap.zip",
-					"appId": "YOUR_APP_ID",
+					"appId": `${config.PGAP_YOUR_APP_ID}`,
 					"user": {
-						"email": "YOUR_EMAIL",
-						"password": "YOUR_PASSWORD"
+						"email": `${config.PGAP_YOUR_EMAIL}`,
+						"password": `${config.PGAP_YOUR_PASSWORD}`
 					},
 					download: {
 						ios: 'dist/ios/ios.ipa',
 						android: 'dist/android/android.apk'
 					},
 					keys: {
-						ios: { "password": "YOUR_IOS_PASSWORD" },
-						android: { "key_pw": "YOUR_ANDROID_PASSWORD", "keystore_pw": "YOUR_ANDROID_KEYSTORE_PASSWORD" }
+						ios: { "password": `${config.PGAP_YOUR_IOS_PASSWORD}` },
+						android: { "key_pw": `${config.PGAP_YOUR_ANDROID_PASSWORD}`, "keystore_pw": `${config.PGAP_YOUR_ANDROID_KEYSTORE_PASSWORD}` }
 					}
 				}
 			}
 		},
-		
+
 		exec: {
 			butlerlogin: 	'butler login',
-			butlerwin32: 	'butler push dist/itch/nw/win32 YOUR_ITCH_ACCOUNT/YOUR_ITCH_GAME_URL:win32',
-			butlerwin64: 	'butler push dist/itch/nw/win64 YOUR_ITCH_ACCOUNT/YOUR_ITCH_GAME_URL:win64',
-			butlermac: 		'butler push dist/itch/nw/osx64 YOUR_ITCH_ACCOUNT/YOUR_ITCH_GAME_URL:mac',
-			butlerlinux32: 	'butler push dist/itch/nw/linux32 YOUR_ITCH_ACCOUNT/YOUR_ITCH_GAME_URL:linux32',
-			butlerlinux64: 	'butler push dist/itch/nw/linux64 YOUR_ITCH_ACCOUNT/YOUR_ITCH_GAME_URL:linux64',
-			butlerandroid: 	'butler push dist/android YOUR_ITCH_ACCOUNT/YOUR_ITCH_GAME_URL:android'
+			butlerwin32: 	`butler push dist/itch/nw/win32 ${config.YOUR_ITCH_ACCOUNT}/${config.YOUR_ITCH_GAME_URL}:win32`,
+			butlerwin64: 	`butler push dist/itch/nw/win64 ${config.YOUR_ITCH_ACCOUNT}/${config.YOUR_ITCH_GAME_URL}:win64`,
+			butlermac: 		`butler push dist/itch/nw/osx64 ${config.YOUR_ITCH_ACCOUNT}/${config.YOUR_ITCH_GAME_URL}:mac`,
+			butlerlinux32: 	`butler push dist/itch/nw/linux32 ${config.YOUR_ITCH_ACCOUNT}/${config.YOUR_ITCH_GAME_URL}:linux32`,
+			butlerlinux64: 	`butler push dist/itch/nw/linux64 ${config.YOUR_ITCH_ACCOUNT}/${config.YOUR_ITCH_GAME_URL}:linux64`,
+			butlerandroid: 	`butler push dist/android ${config.YOUR_ITCH_ACCOUNT}/${config.YOUR_ITCH_GAME_URL}:android`
 		}
 
 	})
@@ -145,4 +162,3 @@ module.exports = function(grunt) {
 	grunt.registerTask('runall', ['cleanfolders', 'desktop', 'steam', 'itch', 'phonegapitch']);
 
 };
-

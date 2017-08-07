@@ -66,7 +66,7 @@ In Terminal: Type "grunt desktop" and hit enter
 1) **Open "src/main/package.json" and enter some information about your game.**
 YOUR_GAME_NAME
 
-2) **Replace these bits in gruntfile.js with your itch.io details:**
+2) **Copy config.example.json to config.json and replace these bits with your itch.io details:**
 YOUR_ITCH_ACCOUNT/YOUR_ITCH_GAME_URL
 
 3) **Replace the default icons in "src/icons" with your own.**
@@ -116,7 +116,7 @@ steam_appid.txt
 ```
 
 3) **Go into the gruntfile.js file and change "version: '0.13.0-beta7'" to whatever version greenworks is built for.**
-For example, if you downloaded "Greenworks v0.10.0 for NW.js v0.22.3 & Electron v1.7.2 Beta" you'd change it to "version: '0.22.3'". 
+For example, if you downloaded "Greenworks v0.10.0 for NW.js v0.22.3 & Electron v1.7.2 Beta" you'd change it to "version: '0.22.3'".
 These versions MUST match or all your Steam stuff will break.
 
 4) **Run the compiler:**
@@ -136,21 +136,22 @@ Making one app at a time is free, and you can add more with a small monthly fee.
 2) **Then you'll need to add signing keys for ios and android to your account, there's instructions here:**
 http://docs.phonegap.com/phonegap-build/signing (This is probably the hardest part of the entire process.)
 
-3) **When that's done, replace these bits in the gruntfile.js file with your phonegap details:**
-YOUR_APP_ID
-YOUR_EMAIL
-YOUR_PASSWORD
-YOUR_IOS_PASSWORD
-YOUR_ANDROID_PASSWORD
-YOUR_ANDROID_KEYSTORE_PASSWORD
-and change this information in "overrides/phonegap/config.xml"
-YOUR_GAME_NAME
-YOUR_GAME_DESCRIPTION
-YOUR_WEBSITE
-YOUR_EMAIL
+3) **If you have not already copy config.example.json to config.json and replace these bits in the file with your phonegap details:**
+PGAP_YOUR_APP_ID,
+PGAP_YOUR_EMAIL,
+PGAP_YOUR_PASSWORD,
+PGAP_YOUR_IOS_PASSWORD,
+PGAP_YOUR_ANDROID_PASSWORD,
+PGAP_YOUR_ANDROID_KEYSTORE_PASSWORD
+
+4) **Change this information in "overrides/phonegap/config.xml"**
+YOUR_GAME_NAME,
+YOUR_GAME_DESCRIPTION,
+YOUR_WEBSITE,
+YOUR_EMAIL,
 YOUR_NAME
 
-4) **Run the compiler:**
+5) **Run the compiler:**
 On PC: double click "build for phonegap.bat"
 On Mac: double click "build for phonegap.command"
 In Terminal: Type "grunt phonegap" and hit enter
@@ -178,4 +179,5 @@ For mobile, you'll need to use a specific audio plugin that gets bundled into th
 
 **Make sure greenworks.js is included in your HTML for Steam stuff**
 
-## Also if you make something cool let me know about it! 
+**Building on Windows may require you to use a CMD prompt with Administrative privileges.**
+## Also if you make something cool let me know about it!
