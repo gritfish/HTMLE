@@ -98,7 +98,7 @@ For integrating Steam with your game, you'll need to do a bit of extra downloadi
 
 1) **You'll need to download:**
 * Greenworks ([https://github.com/greenheartgames/greenworks/releases]()) and download all of the "greenworks-v0.12.0-nw-v0.26.6" releases
-* Steam SDK v1.41 (available through your steam admin page - [https://partner.steamgames.com]())
+* Steam SDK v1.41 (available through your steam admin page - [https://partner.steamgames.com]()) - HTMLE expects the Steam SDK to exist at C:/SteamSDK/ but you can change this in the gruntfile.js file.
 
 2) **Copy files from the Greenworks Release and the Steam SDK so that your "overrides/steam" folder looks like this:**
 Follow the guide here: [https://github.com/greenheartgames/greenworks/blob/master/docs/quick-start-nwjs.md]()
