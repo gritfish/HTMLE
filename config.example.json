@@ -17,5 +17,9 @@
 	"PHONEGAP_ANDROID_KEYSTORE_PASSWORD": "keystorepassword",
 
 	"ITCH_ACCOUNT": "itchusername",
-	"ITCH_GAME_URL": "gameuristem"
+	"ITCH_GAME_URL": "gameuristem",
+
+	"STEAM_USERNAME": "steamusername",
+	"STEAM_PASSWORD": "steampassword",
+	"STEAM_BUILDFILE": "app_build_1000"
 }
