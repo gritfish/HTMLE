@@ -1,7 +1,7 @@
 {
-  "name": "nw",
-  "app_name": "nw",
-  "version": "0.0.1",
+  "name": "HTMLE Example App",
+  "app_name": "HTMLE Example App",
+  "version": "1.0.0",
   "main": "index.html",
   "window": {
     "title": "YOUR_GAME_NAME",

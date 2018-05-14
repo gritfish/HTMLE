@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>GAME_NAME</title>
@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="js/htmle_achievements.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
-<body>
+<body onload="forceRefresh();">
 	<br /><br />
 	<br /><br />
 	<p id="count"></p>
@@ -39,5 +39,7 @@
 	<button class="zoomIn">Zoom In</button><br />
 	<button class="zoomOut">Zoom Out</button><br />
 	<button class="zoomDefault">Zoom Default</button><br />
+
+	<canvas id="forceRefresh" width="1" height="1"></canvas>
 </body>
 </html>
