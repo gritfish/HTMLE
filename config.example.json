@@ -1,0 +1,21 @@
+{
+	"GAME_ID": "com.htmle.example",
+	"GAME_NAME": "HTMLE Example App",
+	"GAME_VERSION": "1.0.0",
+	"GAME_WINDOW_TITLE": "HTMLE Example App",
+	"GAME_DESCRIPTION": "This is an example game.",
+				
+	"YOUR_WEBSITE": "http://gritfish.itch.io/htmle",
+	"YOUR_EMAIL": "press@gritfish.net",
+	"YOUR_NAME": "John Kane",
+
+	"PHONEGAP_APP_ID": "123456",
+	"PHONEGAP_EMAIL": "myPHONEGAPaccount@email.com",
+	"PHONEGAP_PASSWORD": "thepasswordtomyaccount",
+	"PHONEGAP_IOS_PASSWORD": "iossigningpassword",
+	"PHONEGAP_ANDROID_PASSWORD": "androidsigningpassword",
+	"PHONEGAP_ANDROID_KEYSTORE_PASSWORD": "keystorepassword",
+
+	"ITCH_ACCOUNT": "itchusername",
+	"ITCH_GAME_URL": "gameuristem"
+}
