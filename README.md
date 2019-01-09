@@ -58,7 +58,7 @@ These will need to be kept in your own project to keep things functioning proper
 YOUR_GAME_NAME
 
 2) **Replace the default icons in "src/icons" with your own.**
-You can use a free online tool to make Windows/mac icons here: [https://iconverticons.com/online/]()
+You can use a free online tool to make Windows/mac icons here: [https://iconverticons.com/online/](https://iconverticons.com/online/)
 
 3) **Run the compiler:**
 On PC: right-click "build for desktop.bat" and select "Run as administrator"
@@ -97,11 +97,11 @@ In Terminal: "grunt upload-itch" and hit enter
 For integrating Steam with your game, you'll need to do a bit of extra downloading.
 
 1) **You'll need to download:**
-* Greenworks ([https://github.com/greenheartgames/greenworks/releases]()) and download all of the "greenworks-v0.12.0-nw-v0.26.6" releases
-* Steam SDK v1.41 (available through your steam admin page - [https://partner.steamgames.com]()) - HTMLE expects the Steam SDK to exist at C:/SteamSDK/ but you can change this in the gruntfile.js file.
+* Greenworks ([https://github.com/greenheartgames/greenworks/releases](https://github.com/greenheartgames/greenworks/releases)) and download all of the "greenworks-v0.12.0-nw-v0.26.6" releases
+* Steam SDK v1.41 (available through your steam admin page - [https://partner.steamgames.com](https://partner.steamgames.com)) - HTMLE expects the Steam SDK to exist at C:/SteamSDK/ but you can change this in the gruntfile.js file.
 
 2) **Copy files from the Greenworks Release and the Steam SDK so that your "overrides/steam" folder looks like this:**
-Follow the guide here: [https://github.com/greenheartgames/greenworks/blob/master/docs/quick-start-nwjs.md]()
+Follow the guide here: [https://github.com/greenheartgames/greenworks/blob/master/docs/quick-start-nwjs.md](https://github.com/greenheartgames/greenworks/blob/master/docs/quick-start-nwjs.md)
 ```
 greenworks.js
 steam_appid.txt
@@ -146,7 +146,7 @@ In Terminal: "grunt upload-steam" and hit enter
 Making one app at a time is free, and you can add more with a small monthly fee.
 
 2) **Then you'll need to add signing keys for ios and android to your account, there's instructions here:**
-[http://docs.phonegap.com/phonegap-build/signing]() (This is probably the hardest part of the entire process.)
+[http://docs.phonegap.com/phonegap-build/signing](http://docs.phonegap.com/phonegap-build/signing) (This is probably the hardest part of the entire process.)
 
 3) **When that's done, replace these bits in the config.json file with your phonegap details:**
 ```
@@ -182,12 +182,12 @@ In Terminal: Type "grunt runall" and hit enter
 
 ## FAQs and things to remember
 **Audio:** Look at the htmle_audio.js and main.js files for examples on how to code audio consistently.
-**Icons and loading screens:** iOS and Android need a lot of differently sized images for icons and loading screens. There's a separate tool avaiable at [https://gritfish.itch.io/windowdresser]() that takes a lot of the work out of this process.
+**Icons and loading screens:** iOS and Android need a lot of differently sized images for icons and loading screens. There's a separate tool avaiable at [https://gritfish.itch.io/windowdresser](https://gritfish.itch.io/windowdresser) that takes a lot of the work out of this process.
 
 ---
 
 ## Credits/License things:
 **Example sounds used:**
-* [https://freesound.org/people/Connum/sounds/12691/]()
-* [https://freesound.org/people/TexasMusicForge/sounds/2684/]()
-* [https://freesound.org/people/coolguy244e/sounds/266915/]()
+* [https://freesound.org/people/Connum/sounds/12691/](https://freesound.org/people/Connum/sounds/12691/)
+* [https://freesound.org/people/TexasMusicForge/sounds/2684/](https://freesound.org/people/TexasMusicForge/sounds/2684/)
+* [https://freesound.org/people/coolguy244e/sounds/266915/](https://freesound.org/people/coolguy244e/sounds/266915/)
